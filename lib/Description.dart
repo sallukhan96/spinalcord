@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Description extends StatefulWidget {
   String description;
   String Stockfield;
+
   Description({Key? key, required this.Stockfield, required this.description})
       : super(key: key);
 
@@ -15,28 +17,34 @@ class _DescriptionState extends State<Description> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Description"),
+        title: Text("تفصیل"),
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            widget.Stockfield,
-            style: TextStyle(fontSize: 30),
-          ),
-          Text(
-            "Description",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          ),
-          Text(
-            widget.description,
-            style: TextStyle(
-              fontSize: 18,
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 10, 20, 0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              widget.Stockfield,
+              textAlign: TextAlign.right,
+              style: TextStyle(fontSize: 30),
             ),
-          )
-        ],
+            const Text(
+              "تفصیل",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              widget.description,
+              textAlign: TextAlign.right,
+              style: const TextStyle(
+                fontSize: 18,
+                wordSpacing: 4,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

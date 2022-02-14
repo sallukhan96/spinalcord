@@ -1,95 +1,124 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinalcordinjury/LoginPage.dart';
-
-class CompanyStocks {
-  String name;
-
-  CompanyStocks({
-    required this.name,
-  });
-}
+import 'package:flutter_spinalcordinjury/widgets/Card.dart';
 
 class Skin extends StatefulWidget {
+  Skin({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() {
-    // TODO: implement createState
-    return _MyAppState();
-  }
+  _SkinState createState() => _SkinState();
 }
 
-class _MyAppState extends State {
+class _SkinState extends State<Skin> {
   List stocksList = [
-    CompanyStocks(name: "SKin 1"),
-    CompanyStocks(name: "Skin 2"),
-    CompanyStocks(name: "Skin 3"),
-    CompanyStocks(name: "Skin 4"),
-    CompanyStocks(name: "Skin 5"),
-    CompanyStocks(name: "Skin 6"),
-    CompanyStocks(name: "Skin 7"),
-    CompanyStocks(name: "Skin 8"),
-    CompanyStocks(name: "Skin 9"),
-    CompanyStocks(name: "Skin 10"),
-  ];
+    "جلد کے حصے",
+    "پریشر سور",
+    "پریشر سور کے علامات",
+    "پہلا مرحلہ",
+    "دوسرا مرحلہ",
+    "تیسرا مرحلہ",
+    "چوتھامرحلہ",
+    "پریشر سور کا علاج",
 
+
+
+  ];
+  List images = [
+    "assets/images/1.jpeg",
+    "assets/images/2.jpg",
+    "assets/images/3.jpg",
+    "assets/images/4.jpg",
+    "assets/images/5.jpg",
+    "assets/images/6.jpg",
+    "assets/images/7.jpg",
+    "assets/images/8.jpg",
+
+  ];
+  List description = [
+    'جلد کے بیرونی حصہ کو ایپی ڈرمیس کہتے ہیں۔ یہ ہمارے اندرونی اعضاء کو ماحول سے'
+        ' علیحدہ کرتی ہے اور اس کی حفاظت کرتی ہے۔ جلد کے اندرونی حصے کو'
+        ' اینڈوڈرمیس کہتے ہیں۔ اس میں خون کی رگیں، بالوں کی جڑیں ،'
+        ' اعصاب، پسینہ کے غدود اور چربی کے خلیات ہوتے ہیں۔ '
+        'یہ ہمارے جلد کو زندہ اور صحت مند رکھتے ہیں۔',
+
+
+
+
+    'جب کوئی انسان بغیر حرکت کیئے مسلسل ایک جگہ پر بیٹھا یا لیٹا رہے۔'
+        ' تو جلد کے اندر خون کی رگوں پر دباؤ پڑتا ہے۔'
+        ' جس کی وجہ سے جلد کی اس جگہ تک آکسیجن اور خوراک کی ترسیل رک جاتی ہے'
+        ' وہاں پر موجود خلیات مر جاتے ہیں اور نتیجتاً  زخم بن جاتا ہے۔'
+        'اس طرح کے بننے والے زخم کو پریشر سور یا بیڈ سور کہتے ہیں۔ ',
+
+
+
+    'پریشر سور۔ کے ابتدائی علامات یہ ہیں کہ دباؤ والی جگہ بے رنگ، گلابی یا سرخ ہوجاتی ہے۔'
+        ' اور گرم و سخت محسوس ہوتی ہے۔ کالی جلد کی صورت میں یہ تاریک یا چمکدار ہوجاتی ہے۔'
+        ' یہ پریشر سور کا پہلا مرحلہ ہوتا ہے۔ اس میں جلد پھٹی ہوئی نہیں ہوتی۔'
+        ' چنانچہ اگر فوراًدباؤ ہٹایا جائے اور دیکھ بھال کی جائے'
+        ' تو یہ جلدی ٹھیک ہوجاتی ہے۔ لیکن اگر دباؤ نہ ہٹایا جائے'
+        ' تو یہ اور بھی خراب ہوجاتی ہے اس کا رنگ سرخ، جامنی یا کالا ہوجاتاہے۔',
+
+
+
+    'پہلے مرحلے میں جلد بے رنگ، گلابی یا سرخ ہوجاتی ہے۔ اور گرم و سخت محسوس ہوتی ہے۔'
+        ' کالی جلد کی صورت میں یہ تاریک یا چمکدار ہوجاتی ہے۔ ',
+
+
+
+    'دوسرے مرحلے میں جلد کی بیرونی تہہ کی یا '
+        ' جلدکےدونوں تہوں کی موٹائی جزوی طور پر ختم ہوجاتی ہے۔ ',
+
+
+    'اس مرحلے میں جلد کی دونوں تہوں کی موٹائی مکمل طور پر ختم ہوجاتی ہے۔'
+        ' بیرونی اور اندرونی تہوں میں ایک گہرا سوراخ بن جاتا ہے۔',
+
+
+    'اس مرحلے میں زخم اور بھی گہرا ہوجاتا ہے۔'
+        ' اور سوراخ جلد کی دونوں تہوں میں سے ہوتا ہوا ہڈیوں اور جوڑوں تک پہنچ جاتا ہے۔ ',
+
+
+    'اگر جلد کے کسی حصے پر پریشر سور کے ابتدائی علامات جیسے سرخ،'
+        ' بے رنگ یا تاریک ہونا ظاہر ہو۔ تو اس جگہ سے دباؤ فوراً ہٹائیں ۔ '
+        'اگر آپ وہیل چئیر پر بیٹھے ہوئے ہو تو بےشک  بستر پر لیٹ جائیں۔'
+        ' اگر لیٹنے کے دوران ہوا ہو تو پہلو تبدیل کریں اورپہلو تبدیل کرنے '
+        'کا ٹائم کم کریں۔ جلد کا باقاعدگی سے مشاہدہ کرنا شروع کریں۔ وہ وجہ'
+        ' معلوم کرنے کی کوشش کریں جس کی وجہ سے جلد کی رنگ تبدیل ہوئی ہو اور '
+        'اس وجہ سے دوبارہ جلد پر دباؤ نہ آنے دیں۔ اس مرحلے پر آپ صرف '
+        'احتیاط کرکے ہی پریشر سور ہونے سے آپنے آپ کو بچاسکتے ہیں',
+
+
+
+
+  ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                size: 20,
-                color: Colors.white,
-              )),
-          title: Text(
-            "Skin Managment",
-          ),
-          centerTitle: true,
-          backgroundColor: Color(0xff00AFF0),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              size: 20,
+              color: Colors.white,
+            )),
+        title: Text(
+          "جلد کی حفاظت",
         ),
-        body: ListView.builder(
+        centerTitle: true,
+        backgroundColor: Color(0xff00AFF0),
+      ),
+      body: Container(
+        height: MediaQuery.of(context).size.height * .90,
+        width: MediaQuery.of(context).size.width * .90,
+        child: ListView.builder(
           itemCount: stocksList.length,
           itemBuilder: (context, index) {
-            return Container(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  color: Color(0xff00AFF0),
-                  child: Padding(
-                    padding: EdgeInsets.all(20),
-                    child: ListTile(
-                      title: Text(
-                        stocksList[index].name,
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                      leading: CircleAvatar(
-                        radius: 25,
-                        child: Text(
-                          stocksList[index].name[0],
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      trailing: Icon(Icons.navigate_next),
-                      iconColor: Colors.white,
-                      // onTap: () {
-                      //   Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //         builder: (context) => Mobility(),
-                      //       ));
-                      // },
-                    ),
-                  ),
-                ),
-              ),
+            return Customcard(
+              imageUrl: images[index],
+              name: stocksList[index],
+              desc: description[index],
             );
           },
         ),

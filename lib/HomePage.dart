@@ -26,16 +26,25 @@ class _HomepageState extends State<Homepage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const UserAccountsDrawerHeader(
-              accountName: Text("Salman Khan"),
-              accountEmail: Text("Salmanicp.edu@gmail.com"),
-              currentAccountPicture: CircleAvatar(
-                backgroundColor: Colors.blueGrey,
+            const DrawerHeader(
+              child: Padding(
+                padding: EdgeInsets.only(top: 50),
                 child: Text(
-                  "S",
-                  style: TextStyle(fontSize: 40.0),
+                  "",
+
+                  ///text to be added
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
                 ),
               ),
+              decoration: BoxDecoration(
+                  color: Colors.lightBlueAccent,
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/8.jpg"),
+                      fit: (BoxFit.cover))),
             ),
             ListTile(
               leading: Icon(Icons.arrow_back),
@@ -52,7 +61,7 @@ class _HomepageState extends State<Homepage> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.logout),
+              leading: const Icon(Icons.power_settings_new_outlined),
               title: const Text("Logout"),
               onTap: () {
                 Navigator.push(
@@ -67,7 +76,7 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color(0xff00AFF0),
-        title: Text("Spinal Card Injury"),
+        title: Text("اسپائنل کارڈ کی چوٹ "),
       ),
 
       body: pages.elementAt(selectedIndex),
@@ -76,7 +85,7 @@ class _HomepageState extends State<Homepage> {
       bottomNavigationBar: CurvedNavigationBar(
         index: selectedIndex,
         height: 60.0,
-        items: <Widget>[
+        items: const <Widget>[
           SizedBox(
             height: 50,
             child: Icon(

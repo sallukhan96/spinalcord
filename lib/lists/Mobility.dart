@@ -10,16 +10,18 @@ class Mobility extends StatefulWidget {
 
 class _MobilityState extends State<Mobility> {
   List stocksList = [
-    "Mobility list_1",
-    "Mobility list_2",
-    "Mobility list_3",
-    "Mobility list_4",
-    "Mobility list_5",
-    "Mobility list_6",
-    "Mobility list_7",
-    "Mobility list_8",
-    "Mobility list_9",
-    "Mobility list_10",
+    "کندھوں کو موڑنا",
+    "کندھوں کو جسم سے دور لے جانا",
+    "کندھوں  کو متوازی جسم سے دو ر لے جانااور قریب لانا",
+    "کندھوں کوگھمانا",
+    " کہنی کو موڑنا"
+    "اور سیدھا کرنا",
+
+    "اگلے بازو کو گھمانا",
+
+    "کلائی اورانگلیوں کو موڑنااور سیدھا کرنا",
+    "انگوٹھے کو حرکت دینا",
+
   ];
   List images = [
     "assets/images/1.jpeg",
@@ -30,51 +32,58 @@ class _MobilityState extends State<Mobility> {
     "assets/images/6.jpg",
     "assets/images/7.jpg",
     "assets/images/8.jpg",
-    "assets/images/9.jpg",
-    "assets/images/10.jpg",
+
   ];
   List description = [
-    '111The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '222The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '3333The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '444The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '5555The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '6666The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '777he spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '8888The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '999The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
-    '101010The spinal cord is a long bundle of nerves and cells that '
-        'extends from the lower portion of the brain to the'
-        ' lower back. It carries signals between the brain '
-        'and the rest of the body',
+       'مددگار آپ کے وہیل چئیر کے ساتھ سائیڈ پر کھڑا ہو۔'
+           ' آپنے ایک ہاتھ کے ساتھ آپ کے بازو کے ایک طرف اور '
+           'دوسرے ہاتھ کے ساتھ  آپ کے بازو کی دوسری طرف کو پکڑے۔ پھر'
+           ' کہنی کو سیدھا رکھتے ہوئے آپ کے بازو کو اوپر نیچے اٹھائیے'
+       ,
+
+
+    'ورزش دینے والا آپ کے پیچھے کھڑا ہو۔ پھر دونوں ہاتھوں  کی مدد سے آپ کے بازو کو پکڑے۔'
+        ' پھر کہنی کو سیدھا رکھتے ہوئے بازو کو کندھے کی اونچائی '
+    'تک سائیڈ پر لے آئے اور پھر سر کے اوپر لے جائے '
+        'پھر دوبارہ اسی اونچائی پر اوپر اور نیچے حرکت دے',
+
+
+
+
+    'مددگار آپ کے بازو کو کہنی اور کلائی سے پکڑ کر کندھے'
+        ' کے اونچائی پر سائیڈ پر لے آئے۔ پھر بازو کو موڑتے ہوئے آپ کے ہاتھ مخالف کندھے'
+        ' کے ساتھ ٹچ کرے اور پھر دوبارہ اسی پوزیشن میں لے آئے',
+
+
+
+    'مددگار آپ کے بازو کو کہنی اور اور'
+        ' کلائی سے پکڑ کر کندھوں  کی اونچائی پر لے آئے اور کہنی کو نوے درجے پر موڑ ے۔'
+        ' پھر ہاتھ کے اگلے حصے کو چھت اور زمین کی طرف حرکت دے',
+
+
+
+
+  'مددگار آپ کے بازو کو کلائی اور اوپر کے حصے سے پکڑ کر کلائی کو کندھے'
+      'کے ساتھ ملائے اور پھر مکمل سیدھا کرے۔',
+
+
+    'آپنی کہنی کو موڑ کر سہارے پر رکھیں'
+        '۔ مددگار آپ کے ہاتھ کو ہاتھ ملانے کے انداز'
+        ' میں پکڑ کر ہاتھ کو اس انداز میں گھمائے کہ ہتھیلی کا رخ اوپر نیچے ہو۔',
+
+
+    'مددگار ایک ہاتھ سے آپ کے کلائی کو پکڑے'
+        ' اور دوسرے ہاتھ سے انگلیوں کو پکڑ کر موڑے'
+        ' اور پھر کلائی کو اوپر نیچے اس انداز سے حرکت دے'
+        ' کہ نیچے کی طرف آپ کی انگلیاں سیدھی ہو۔',
+
+
+    'مددگار آپ کے انگوٹھے کو پکڑ کر شہادت کی انگلی سے دور لے جائے'
+        ' ۔ پھر چھوٹی انگلی کے سا تھ ٹچ کرے اور دوبارہ اسی حالت میں لے آئے ۔',
+
+
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,7 +98,7 @@ class _MobilityState extends State<Mobility> {
               color: Colors.white,
             )),
         title: Text(
-          "Mobility Activity",
+          "حرکت کے افعال",
         ),
         centerTitle: true,
         backgroundColor: Color(0xff00AFF0),

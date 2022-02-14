@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'LoginPage.dart';
-import 'LoginPage.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -26,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         padding: const EdgeInsets.only(left: 30),
         child: Container(
           child: Image.asset(
-            'assets/logoo.png',
+            'assets/images/splashscreen.png',
             fit: BoxFit.scaleDown,
             height: 800,
             width: 300,

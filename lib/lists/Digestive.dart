@@ -1,95 +1,149 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinalcordinjury/LoginPage.dart';
-
-class CompanyStocks {
-  String name;
-
-  CompanyStocks({
-    required this.name,
-  });
-}
+import 'package:flutter_spinalcordinjury/widgets/Card.dart';
 
 class Digestive extends StatefulWidget {
+  Digestive({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() {
-    // TODO: implement createState
-    return _MyAppState();
-  }
+  _DigestiveState createState() => _DigestiveState();
 }
 
-class _MyAppState extends State {
+class _DigestiveState extends State<Digestive> {
   List stocksList = [
-    CompanyStocks(name: "Digestive 1"),
-    CompanyStocks(name: "Digestive 2"),
-    CompanyStocks(name: "Digestive 3"),
-    CompanyStocks(name: "Digestive 4"),
-    CompanyStocks(name: "Digestive 5"),
-    CompanyStocks(name: "Digestive 6"),
-    CompanyStocks(name: "Digestive 7"),
-    CompanyStocks(name: "Digestive 8"),
-    CompanyStocks(name: "Digestive 9"),
-    CompanyStocks(name: "Digestive 10"),
-  ];
+    "نظام انہضام",
+    "پاخانہ کا طریقہ کار",
+    "پیرآپلیجکس کا طریقہ",
+    "خوراک",
+    "خوراک جو پاخانہ کو ٹھوس  مگر نرم رکھے",
+    "خوراک جس سے دست ہوتے",
+    "خوراک جس سے گیس ہوتی ہے",
+    "پانی",
+    "علامات",
 
+
+
+  ];
+  List images = [
+    "assets/images/1.jpeg",
+    "assets/images/2.jpg",
+    "assets/images/3.jpg",
+    "assets/images/4.jpg",
+    "assets/images/5.jpg",
+    "assets/images/6.jpg",
+    "assets/images/7.jpg",
+    "assets/images/8.jpg",
+    "assets/images/9.jpg",
+
+  ];
+  List description = [
+    'انسان کا نظام  انہضام ایک نالی کی صورت میں ہوتا ہے۔'
+        ' جو منہ سے شروع ہوکر مقعد پر ختم ہو تا ہے۔ منہ کے بعد خوراک'
+        ' کی نالی، معدہ، چھوٹی آنت، بڑی آنت، اور ریکٹم ہوتے ہیں ۔'
+        ' چھوٹی انت اور بڑی آنت کو اکٹھا باول((Bowel کہتے ہیں۔ '
+        '۔ ہم جو خوراک کھاتے ہیں ہمارا نظام انہضام '
+        'اسے توڑ تا ہے اور اس سے جسم کے لیے مفید اجزاء'
+        ' اور پانی علیحدہ کرکے جسم میں جذب کرتا ہے۔',
+
+
+    'جب ایک صحت مند آدمی کا ریکٹم فضلہ سے بھر جاتا ہے تو اسے پاخانہ کرنے کی حاجت  محسوس ہوتی ہے۔ '
+        'وہ پاخانہ روکتا ہے اور ٹائیلٹ جاکر جسم سے باہر خارج کرتا ہے۔ پاخانہ نکالنے'
+        ' کے لیے آنتوں  کی حرکت    کو باول مومنٹ کہتے ہیں۔ حرام مغز کی چوٹ کے'
+        ' بعد چونکہ انسان کے جسم کا رابطہ دماغ سے منقطع ہو جاتا ہے اسلئیے اسے'
+        ' ریکٹم کے بھرنے یا پاخانہ کی حاجت کا احساس نہیں ہوتا۔ چنانچہ سوچ بچار'
+        ' اور وقت  مقرر کرکے پاخانہ خارج کرنے کی منصوبہ بندی کی جاتی ہے۔ ',
+
+
+    '	کموڈ والی کرسی پر بیٹھنے کے بعد دستانہ'
+        ' پہن کر ہر پانچ دس منٹ بعد انگلی کی مدد سے ریکٹل سٹیمولیشن کریں'
+    '	انگلی کی مدد سے پاخانہ کو باہر نکالیں '
+    'سپوزیٹری کا استعمال کریں'
+    '4.	کموڈ والی کرسی پر بیٹھ کر لمبی لمبی سانسیں لیں. سانس اندر لے کر روکیں '
+        'اور پیٹ کے عضلات پر زور لگائیں تاکہ پاخانہ باہر نکلے۔'
+    '5.	پیٹ کے اوپر گھڑی وار ہاتھ دائیں سے بائیں طرف پھیریں '
+    '6.	آگے کی طرف جھکیں اور آپنے آپ کو کرسی میں اوپر اٹھائیں جیسے'
+        ' کہ دباؤ ہٹانے کے دوران کیا جاتا ہے۔ اور پہلو کی طرف جھکیں'
+        ' اس طرح آنتوں  کی پوزیشن بدل جاتی ہے اور پاخانہ ہوجاتا ہے۔ '
+    ,
+
+
+    'آپ کے باول پروگرام میں آپ کے خوراک کا بہت عمل دخل   ہوتا ہے۔ چنانچہ آپنے خوراک پر خاص نظر رکھیں'
+        ' اور ایسی خوراک کا استعمال کم کریں یا چھو ڑ دیں جس سے آپ کا باول پروگرام خراب ہو۔ ',
+
+
+
+    'ٹھوس  مگر نرم حالت کا پاخانہ باول پروگرام کو برقرار رکھنے کے لیے بہت ہی اچھا ہو تا ہے۔ اس کے لیے'
+        ' ایسی خوراک استعمال کرنی چاہئیے جس میں فائیبر یا ریشہ زیادہ ہو۔ کیونکہ'
+        ' ریشہ خوراک سے پانی کو جذب کرکے پاخانہ کو ٹھوس  مگر نرم رکھتا ہے۔'
+        ' ایسی خوراک میں سبزیاں، میوے، خشک میوہ جات،روٹی وغیرہ شامل ہیں۔',
+
+
+
+    'ویسے تو ایسی کوئی بھی ایک خوراک نہیں جس سے ہر'
+        ' کسی کو دست لاحق ہو۔'
+        ' مختلف لوگوں کے لیے مختلف خوراکیں باعث دست ہوتی ہے۔'
+        ' مثلاً کسی کو مصالحہ دار خوراک سے کسی کو تیل والی خوراک سے کسی کو کیفین جیسے '
+        'چائے وغیرہ سے اور کسی کو کوک، چاکلیٹ اور سوفٹ ڈرنک سے دست لاحق ہوتی ہے۔'
+        ' گندی خوراک جس میں بیکٹیریا ہوتے ہیں کھانے سے بھی دست لاحق ہوتی ہے',
+
+
+
+    'ایسی خوراک میں لوبیا، گھوبی ، پیاز، مولی،  شلجم، مکئی  اور کھیرا'
+        ' وغیرہ شامل ہیں۔ چنانچہ گیس کی '
+        'شکایت کی صورت میں اس سے پرہیز کرنی چاہیے۔ ',
+
+
+
+
+    'روزانہ زیادہ سے زیادہ پانی پئیں تاکہ آپ کو قبض نہ ہو۔ اگر آپ ریشہ والی غذا'
+        ' زیادہ کھاتے ہو تو اس کے لیے زیادہ پانی پینے کی ضرورت ہوتی ہے۔'
+        ' جو پانی آپ پیتے ہیں وہ بالکل صاف اور جراثیم سے پاک ہونی '
+        'چاہیے تاکہ پیٹ خراب نہ ہو۔ اگر ممکن ہو تو فلٹر کا پانی پئیں ',
+
+
+
+    '	چونکہ حرام مغز کی چوٹ کے بعد آپ کے احساسات متاثر ہوتے ہیں اس لیے اکثر آپ کو '
+        'اس کا پتہ بھی نہیں چلتا کہ آپ کو قبض ہے۔ اس کے علامات مندرجہ ذیل ہیں'
+  '	پتھر جیسا پاخانہ آنا'
+  	'پیٹ میں درد ہو نا اور پیٹ کے نیچے حصے کا سخت ہو جانا     یا پھول سوج جانا۔'
+  'بھوک  نہ لگنا'
+  'سر میں درد ہونا اور چکر آنا '
+  'پسینہ آنا ۔اٹونولک ڈیسریفلیکسیا کا آنا'
+  ,
+
+
+
+
+
+  ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                size: 20,
-                color: Colors.white,
-              )),
-          title: Text(
-            "Digestive system",
-          ),
-          centerTitle: true,
-          backgroundColor: Color(0xff00AFF0),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              size: 20,
+              color: Colors.white,
+            )),
+        title: Text(
+          "نظام انہضام",
         ),
-        body: ListView.builder(
+        centerTitle: true,
+        backgroundColor: Color(0xff00AFF0),
+      ),
+      body: Container(
+        height: MediaQuery.of(context).size.height * .90,
+        width: MediaQuery.of(context).size.width * .90,
+        child: ListView.builder(
           itemCount: stocksList.length,
           itemBuilder: (context, index) {
-            return Container(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  color: Color(0xff00AFF0),
-                  child: Padding(
-                    padding: EdgeInsets.all(20),
-                    child: ListTile(
-                      title: Text(
-                        stocksList[index].name,
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                      leading: CircleAvatar(
-                        radius: 25,
-                        child: Text(
-                          stocksList[index].name[0],
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      trailing: Icon(Icons.navigate_next),
-                      iconColor: Colors.white,
-                      // onTap: () {
-                      //   Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //         builder: (context) => Mobility(),
-                      //       ));
-                      // },
-                    ),
-                  ),
-                ),
-              ),
+            return Customcard(
+              imageUrl: images[index],
+              name: stocksList[index],
+              desc: description[index],
             );
           },
         ),

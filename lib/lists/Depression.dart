@@ -1,95 +1,86 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinalcordinjury/LoginPage.dart';
-
-class CompanyStocks {
-  String name;
-
-  CompanyStocks({
-    required this.name,
-  });
-}
+import 'package:flutter_spinalcordinjury/widgets/Card.dart';
 
 class Depression extends StatefulWidget {
+  Depression({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() {
-    // TODO: implement createState
-    return _MyAppState();
-  }
+  _DepressionState createState() => _DepressionState();
 }
 
-class _MyAppState extends State {
+class _DepressionState extends State<Depression> {
   List stocksList = [
-    CompanyStocks(name: "Depression 1"),
-    CompanyStocks(name: "Depression 2"),
-    CompanyStocks(name: "Depression 3"),
-    CompanyStocks(name: "Depression 4"),
-    CompanyStocks(name: "Depression 5"),
-    CompanyStocks(name: "Depression 6"),
-    CompanyStocks(name: "Depression 7"),
-    CompanyStocks(name: "Depression 8"),
-    CompanyStocks(name: "Depression 9"),
-    CompanyStocks(name: "Depression 10"),
-  ];
+    "ڈپریشن",
+    "ڈپریشن کے علامات ",
+    "ڈپریشن کا علاج ",
 
+
+
+
+
+
+  ];
+  List images = [
+    "assets/images/1.jpeg",
+    "assets/images/2.jpg",
+    "assets/images/3.jpg",
+
+  ];
+  List description = [
+   'زندگی میں خوشی، غم، فکر و پریشانی عام سے احساسات ہیں جن کا ہر'
+       ' انسان کو سامنا ہے۔ لیکن جب فکر و پریشانی بڑھ کر ڈپریشن کی شکل'
+       ' اختیار کر ے تو یہ ایک خطرناک چیز ہے اور اس کا علاج کریں کیونکہ'
+       ' دوسری بیماریوں کی طرح یہ بھی ایک بیماری ہے اور علاج طلب ہے',
+
+
+
+    '	نیند نہ آنا'
+  	'بھوک  کا متاثر ہونا۔'
+  'پریشان و ناامید محسوس کرنا۔'
+  'زندگی کے معاملات میں دلچسپی نہ لینا یا ان سے لطف اندوز نہ ہونا۔'
+  'ہر وقت تھکن محسوس کرنا۔'
+  'فیصلہ کرنے میں دقت محسوس کرنا۔'
+  'آپنی زندگی بے کار محسوس ہونا یا اس کا کوئی مطلب نظر نہ آنا اور آپنے آپ کو موردالزام محسوس کر نا'
+  ,
+
+
+    'اچھی بات یہ ہے کہ ڈپریشن کوئی نا قا بل علاج مرض  نہیں ہے۔'
+        'اس کا علاج کرکے آپ آسانی سے نارمل حالت میں اسکتے ہیں۔'
+    'پچھلے سطور میں بیان کی گئ مثبت باتوں پر عمل کریں۔ انشاءاللہ ڈپریشن '
+        'آپ کے قریب بھی نہیں آئے گی اور اگر ہے تو ٹھیک ہوجائے گی۔ '
+    'ادویات  ڈاکٹر کے مشورے سے استعمال کریں ۔ یہ جسم کے کیمیائی توازن کو بحال'
+        ' کرتی ہیں جس سے آپ ذہنی اور جسمانی طور پر پر بہتر محسوس کریں گے۔',
+
+  ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                size: 20,
-                color: Colors.white,
-              )),
-          title: Text(
-            "Depression",
-          ),
-          centerTitle: true,
-          backgroundColor: Color(0xff00AFF0),
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back_ios,
+              size: 20,
+              color: Colors.white,
+            )),
+        title: Text(
+          "نفسیاتی بحالی",
         ),
-        body: ListView.builder(
+        centerTitle: true,
+        backgroundColor: Color(0xff00AFF0),
+      ),
+      body: Container(
+        height: MediaQuery.of(context).size.height * .90,
+        width: MediaQuery.of(context).size.width * .90,
+        child: ListView.builder(
           itemCount: stocksList.length,
           itemBuilder: (context, index) {
-            return Container(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  color: Color(0xff00AFF0),
-                  child: Padding(
-                    padding: EdgeInsets.all(20),
-                    child: ListTile(
-                      title: Text(
-                        stocksList[index].name,
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                      leading: CircleAvatar(
-                        radius: 25,
-                        child: Text(
-                          stocksList[index].name[0],
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      trailing: Icon(Icons.navigate_next),
-                      iconColor: Colors.white,
-                      // onTap: () {
-                      //   Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //         builder: (context) => Mobility(),
-                      //       ));
-                      // },
-                    ),
-                  ),
-                ),
-              ),
+            return Customcard(
+              imageUrl: images[index],
+              name: stocksList[index],
+              desc: description[index],
             );
           },
         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinalcordinjury/ForgotPassword.dart';
 import 'package:flutter_spinalcordinjury/HomePage.dart';
 import 'package:flutter_spinalcordinjury/SignUp.dart';
 
@@ -21,13 +20,13 @@ class LoginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        height: 100,
-                        width: 150,
+                        height: 150,
+                        width: 200,
                         child: Image.asset(
-                          'assets/Logo.png',
+                          'assets/images/urdu-version-150x100.png',
                           fit: BoxFit.fitWidth,
-                          height: 700,
-                          width: 300,
+                          height: 150,
+                          width: 100,
                         ),
                       ),
                       const SizedBox(
@@ -69,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
 
-                      ///forgot password
+                      ///forgot password commented code
 
                       // Padding(
                       //   padding: const EdgeInsets.all(20),
