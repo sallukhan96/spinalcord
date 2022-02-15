@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Description extends StatefulWidget {
-  String description;
-  String Stockfield;
-  String Imgsource;
+  String? description;
+  String? Stockfield;
+  String? Imgsource;
 
-  Description({Key? key,
-    required this.Stockfield,
-    required this.description,
-    required this.Imgsource})
+  Description({Key? key, this.Stockfield, this.description, this.Imgsource})
       : super(key: key);
 
   @override
@@ -31,7 +28,7 @@ class _DescriptionState extends State<Description> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                widget.Stockfield,
+                widget.Stockfield ?? ' ',
                 textAlign: TextAlign.right,
                 style: const TextStyle(fontSize: 30),
               ),
@@ -40,14 +37,21 @@ class _DescriptionState extends State<Description> {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
               Text(
-                widget.description,
+                widget.description ?? ' ',
                 textAlign: TextAlign.right,
                 style: const TextStyle(
                   fontSize: 18,
                   wordSpacing: 4,
                 ),
               ),
-              Image(image: AssetImage(widget.Imgsource),)
+              widget.Imgsource == 'null'
+                  ? const SizedBox(
+                      height: 100,
+                      width: 1,
+                    )
+                  : Image(
+                      image: AssetImage(widget.Imgsource!),
+                    )
             ],
           ),
         ),
