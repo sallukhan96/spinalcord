@@ -16,7 +16,6 @@ class _MobilityState extends State<Mobility> {
     "کندھوں کوگھمانا",
     " کہنی کو موڑنا"
     "اور سیدھا کرنا",
-
     "اگلے بازو کو گھمانا",
 
     "کلائی اورانگلیوں کو موڑنااور سیدھا کرنا",
@@ -97,7 +96,7 @@ class _MobilityState extends State<Mobility> {
               size: 20,
               color: Colors.white,
             )),
-        title: Text(
+        title: const Text(
           "حرکت کے افعال",
         ),
         centerTitle: true,

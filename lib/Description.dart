@@ -32,7 +32,7 @@ class _DescriptionState extends State<Description> {
               Text(
                 widget.Stockfield,
                 textAlign: TextAlign.right,
-                style: TextStyle(fontSize: 30),
+                style: const TextStyle(fontSize: 30),
               ),
               const Text(
                 "تفصیل",
