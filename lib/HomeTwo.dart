@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_spinalcordinjury/lists/list_data.dart';
 import 'package:flutter_spinalcordinjury/models/CustmoCardModel.dart';
@@ -17,8 +16,7 @@ class _HomeTwoState extends State<HomeTwo> {
     return Scaffold(
 
         ///home dashboard
-        body:
-        CustomScrollView(
+        body: CustomScrollView(
       primary: false,
       slivers: <Widget>[
         SliverPadding(
@@ -28,17 +26,56 @@ class _HomeTwoState extends State<HomeTwo> {
             mainAxisSpacing: 25,
             crossAxisCount: 2,
             children: <Widget>[
-              GridItem(label:'حرکت کے افعال' ,imageUrl:'assets/mobility.png' ,data: TextData.mobilities,),
-              GridItem(label:'مثانہ کا انتظام' ,imageUrl:'assets/bladder.png' ,data: TextData.depression,),
-              GridItem(label:'جلد کی حفاظت ' ,imageUrl:'assets/skin.png' ,data: TextData.mobilities,),
-              GridItem(label:'نظام انہضام' ,imageUrl:'assets/digestive.png' ,data: TextData.mobilities,),
-              GridItem(label:'نظام تنفس' ,imageUrl:'assets/respiratory.png' ,data: TextData.mobilities,),
-              GridItem(label:'مکمل زخ  ' ,imageUrl:'assets/compelete-injury.png' ,data: TextData.mobilities,),
-              GridItem(label:'نامکمل زخم ' ,imageUrl:'assets/incomplete-injury.png' ,data: TextData.mobilities,),
-              GridItem(label:'نفسیاتی بحالی ' ,imageUrl:'assets/depression.png' ,data: TextData.mobilities,),
-              GridItem(label:'جنسی بحالی ' ,imageUrl:'assets/Sexual.png' ,data: TextData.mobilities,),
-              GridItem(label:'معذوری' ,imageUrl:'assets/disability.png' ,data: TextData.mobilities,),
-
+              GridItem(
+                label: 'حرکت کے افعال',
+                imageUrl: 'assets/mobility.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'مثانہ کا انتظام',
+                imageUrl: 'assets/bladder.png',
+                data: TextData.depression,
+              ),
+              GridItem(
+                label: 'جلد کی حفاظت ',
+                imageUrl: 'assets/skin.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'نظام انہضام',
+                imageUrl: 'assets/digestive.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'نظام تنفس',
+                imageUrl: 'assets/respiratory.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'مکمل زخ  ',
+                imageUrl: 'assets/compelete-injury.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'نامکمل زخم ',
+                imageUrl: 'assets/incomplete-injury.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'نفسیاتی بحالی ',
+                imageUrl: 'assets/depression.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'جنسی بحالی ',
+                imageUrl: 'assets/Sexual.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'معذوری',
+                imageUrl: 'assets/disability.png',
+                data: TextData.mobilities,
+              ),
 
               // InkWell(
               //   onTap: () {
@@ -452,13 +489,16 @@ class _HomeTwoState extends State<HomeTwo> {
   }
 }
 
-
-
 /// Grid Item Widget
 ///
 
 class GridItem extends StatelessWidget {
-  const GridItem({required this.imageUrl,required this.label,required this.data,Key? key}) : super(key: key);
+  const GridItem(
+      {required this.imageUrl,
+      required this.label,
+      required this.data,
+      Key? key})
+      : super(key: key);
 
   final String imageUrl;
   final String label;
@@ -466,18 +506,21 @@ class GridItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   InkWell(
+    return InkWell(
       onTap: () {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => ListData(data: data,title: label,),
+              builder: (context) => ListData(
+                data: data,
+                title: label,
+              ),
             ));
       },
       child: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children:  [
+          children: [
             ImageIcon(
               AssetImage(imageUrl),
               size: 40,
