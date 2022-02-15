@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class Description extends StatefulWidget {
   String description;
   String Stockfield;
+  String Imgsource;
 
-  Description({Key? key, required this.Stockfield, required this.description})
+  Description({Key? key, required this.Stockfield, required this.description,required this.Imgsource})
       : super(key: key);
 
   @override
@@ -44,6 +45,9 @@ class _DescriptionState extends State<Description> {
                   fontSize: 18,
                   wordSpacing: 4,
                 ),
+              ),
+              Container(
+                child: Image(image: AssetImage("${widget.Imgsource}"),),
               )
             ],
           ),

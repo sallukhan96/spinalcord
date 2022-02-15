@@ -26,7 +26,8 @@ class Customcard extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) => Description(
                   description: desc,
-                  Stockfield: name,
+                  Stockfield: name, Imgsource: imageUrl,
+
                 ),
               ));
         },
@@ -62,7 +63,7 @@ class Customcard extends StatelessWidget {
                       MaterialPageRoute(
                         builder: (context) => Description(
                           description: desc,
-                          Stockfield: name,
+                          Stockfield: name, Imgsource: '/imageUrl',
                         ),
                       ));
                 },

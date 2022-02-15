@@ -24,7 +24,7 @@ class _MobilityState extends State<Mobility> {
 
   ];
   List images = [
-    "assets/images/1.jpeg",
+    "assets/imagesDescription/mobility2.png",
     "assets/images/2.jpg",
     "assets/images/3.jpg",
     "assets/images/4.jpg",
