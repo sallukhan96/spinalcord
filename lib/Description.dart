@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'models/CustmoCardModel.dart';
+
 class Description extends StatefulWidget {
-  String? description;
+  List<Paragraph>? data;
   String? Stockfield;
   String? Imgsource;
 
-  Description({Key? key, this.Stockfield, this.description, this.Imgsource})
+  Description({Key? key, this.Stockfield, this.data, this.Imgsource})
       : super(key: key);
 
   @override
@@ -32,18 +34,14 @@ class _DescriptionState extends State<Description> {
                 textAlign: TextAlign.right,
                 style: const TextStyle(fontSize: 30),
               ),
-              const Text(
-                "تفصیل",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              const SizedBox(
+                height: 10,
               ),
-              Text(
-                widget.description ?? ' ',
-                textAlign: TextAlign.right,
-                style: const TextStyle(
-                  fontSize: 18,
-                  wordSpacing: 4,
+              for (var i = 0; i < widget.data!.length; i++)
+                _paragraph(
+                  heading: widget.data?[i].heading,
+                  paragraph: widget.data?[i].paragraph,
                 ),
-              ),
               widget.Imgsource == 'null'
                   ? const SizedBox(
                       height: 100,
@@ -57,5 +55,27 @@ class _DescriptionState extends State<Description> {
         ),
       ),
     );
+  }
+
+  _paragraph({String? heading, String? paragraph}) {
+    return ListView(shrinkWrap: true,
+        children: [
+      const SizedBox(
+        height: 30,
+      ),
+      Text(
+        heading ?? ' ',
+        textAlign: TextAlign.right,
+        style: const TextStyle(fontSize: 26),
+      ),
+      Text(
+        paragraph ?? ' ',
+        textAlign: TextAlign.right,
+        style: const TextStyle(
+          fontSize: 18,
+          wordSpacing: 4,
+        ),
+      ),
+    ]);
   }
 }

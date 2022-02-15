@@ -38,7 +38,7 @@ class ListData extends StatelessWidget {
               Customcard(
               imageUrl: data[index].imageUrl!,
               name: data[index].heading!,
-              desc: data[index].paragraph!,
+              desc: data[index].paragraph,
             );
           },
         ),

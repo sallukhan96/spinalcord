@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Description.dart';
+import '../models/CustmoCardModel.dart';
 
 class Customcard extends StatelessWidget {
   final String name;
   final String imageUrl;
-  final String desc;
+  final List<Paragraph>?  desc;
 
   Customcard(
       {Key? key,
@@ -25,7 +26,7 @@ class Customcard extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => Description(
-                  description: desc,
+                  data: desc,
                   Stockfield: name, Imgsource: imageUrl,
 
                 ),
@@ -62,7 +63,7 @@ class Customcard extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => Description(
-                          description: desc,
+                          data: desc,
                           Stockfield: name, Imgsource: '/imageUrl',
                         ),
                       ));
