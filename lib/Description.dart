@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Description extends StatefulWidget {
@@ -6,11 +5,13 @@ class Description extends StatefulWidget {
   String Stockfield;
   String Imgsource;
 
-  Description({Key? key, required this.Stockfield, required this.description,required this.Imgsource})
+  Description({Key? key,
+    required this.Stockfield,
+    required this.description,
+    required this.Imgsource})
       : super(key: key);
 
   @override
-
   _DescriptionState createState() => _DescriptionState();
 }
 
@@ -19,7 +20,7 @@ class _DescriptionState extends State<Description> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("تفصیل"),
+        title: const Text("تفصیل"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -46,9 +47,7 @@ class _DescriptionState extends State<Description> {
                   wordSpacing: 4,
                 ),
               ),
-              Container(
-                child: Image(image: AssetImage("${widget.Imgsource}"),),
-              )
+              Image(image: AssetImage(widget.Imgsource),)
             ],
           ),
         ),
