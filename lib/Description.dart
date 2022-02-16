@@ -27,7 +27,7 @@ class _DescriptionState extends State<Description> {
         width: double.infinity,
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 10, 20, 0),
+            padding: const EdgeInsets.fromLTRB(10, 10, 30, 0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,7 +35,7 @@ class _DescriptionState extends State<Description> {
                 Text(
                   widget.Stockfield ?? ' ',
                   textAlign: TextAlign.right,
-                  style: const TextStyle(fontSize: 30),
+                  style: const TextStyle(fontSize: 25),
                 ),
                 const SizedBox(
                   height: 10,
@@ -65,18 +65,18 @@ class _DescriptionState extends State<Description> {
     return Column(
       children: [
         const SizedBox(
-          height: 30,
+          height: 10,
         ),
         Text(
           heading ?? ' ',
           textAlign: TextAlign.right,
-          style: const TextStyle(fontSize: 26),
+          style: const TextStyle(fontSize: 23),
         ),
         Text(
           paragraph ?? ' ',
           textAlign: TextAlign.right,
           style: const TextStyle(
-            fontSize: 18,
+            fontSize: 17,
             wordSpacing: 4,
           ),
         ),
