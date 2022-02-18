@@ -35,6 +35,7 @@ class _DescriptionState extends State<Description> {
                 Text(
                   widget.Stockfield ?? ' ',
                   textAlign: TextAlign.right,
+                  textDirection: TextDirection.rtl,
                   style: const TextStyle(fontSize: 25),
                 ),
                 const SizedBox(
@@ -70,13 +71,15 @@ class _DescriptionState extends State<Description> {
         Text(
           heading ?? ' ',
           textAlign: TextAlign.right,
-          style: const TextStyle(fontSize: 23),
+          textDirection: TextDirection.rtl,
+          style: const TextStyle(fontSize: 22),
         ),
         Text(
           paragraph ?? ' ',
           textAlign: TextAlign.right,
+          textDirection: TextDirection.rtl,
           style: const TextStyle(
-            fontSize: 17,
+            fontSize: 16,
             wordSpacing: 4,
           ),
         ),
