@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'models/CustmoCardModel.dart';
@@ -19,7 +21,12 @@ class _DescriptionState extends State<Description> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("تفصیل"),
+        title: const Text(
+          "تفصیل",
+          style: TextStyle(
+            fontFamily: 'NotoNastaliqUrdu',
+          ),
+        ),
         centerTitle: true,
       ),
       body: Container(
@@ -27,16 +34,19 @@ class _DescriptionState extends State<Description> {
         width: double.infinity,
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 10, 30, 0),
+            padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
                   widget.Stockfield ?? ' ',
-                  textAlign: TextAlign.right,
+                  textAlign: TextAlign.justify,
                   textDirection: TextDirection.rtl,
-                  style: const TextStyle(fontSize: 25),
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: 'NotoNastaliqUrdu',
+                  ),
                 ),
                 const SizedBox(
                   height: 10,
@@ -70,17 +80,18 @@ class _DescriptionState extends State<Description> {
         ),
         Text(
           heading ?? ' ',
-          textAlign: TextAlign.right,
+          textAlign: TextAlign.justify,
           textDirection: TextDirection.rtl,
-          style: const TextStyle(fontSize: 22),
+          style: const TextStyle(fontSize: 22, fontFamily: 'NotoNastaliqUrdu'),
         ),
         Text(
           paragraph ?? ' ',
-          textAlign: TextAlign.right,
+          textAlign: TextAlign.justify,
           textDirection: TextDirection.rtl,
           style: const TextStyle(
             fontSize: 16,
-            wordSpacing: 4,
+            fontFamily: 'NotoNastaliqUrdu',
+            wordSpacing: 2,
           ),
         ),
       ],

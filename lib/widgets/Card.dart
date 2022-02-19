@@ -7,7 +7,7 @@ import '../models/CustmoCardModel.dart';
 class Customcard extends StatelessWidget {
   final String name;
   final String imageUrl;
-  final List<Paragraph>?  desc;
+  final List<Paragraph>? desc;
 
   Customcard(
       {Key? key,
@@ -27,8 +27,8 @@ class Customcard extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) => Description(
                   data: desc,
-                  Stockfield: name, Imgsource: imageUrl,
-
+                  Stockfield: name,
+                  Imgsource: imageUrl,
                 ),
               ));
         },
@@ -46,9 +46,10 @@ class Customcard extends StatelessWidget {
             child: ListTile(
               title: Text(
                 name,
-                textAlign: TextAlign.center,
-                style: TextStyle(
+                textAlign: TextAlign.end,
+                style: const TextStyle(
                   fontSize: 20,
+                  fontFamily: 'NotoNastaliqUrdu',
                 ),
               ),
 
@@ -64,7 +65,8 @@ class Customcard extends StatelessWidget {
                       MaterialPageRoute(
                         builder: (context) => Description(
                           data: desc,
-                          Stockfield: name, Imgsource: '/imageUrl',
+                          Stockfield: name,
+                          Imgsource: '/imageUrl',
                         ),
                       ));
                 },
