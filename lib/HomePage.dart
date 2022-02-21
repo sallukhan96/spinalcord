@@ -54,8 +54,8 @@ class _HomepageState extends State<Homepage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.contact_page_outlined),
-              title: const Text("About Us"),
+              leading: Icon(Icons.phone),
+              title: const Text("Contact us"),
               onTap: () {
                 Navigator.pop(context);
               },
