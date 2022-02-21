@@ -48,7 +48,8 @@ class Customcard extends StatelessWidget {
                 name,
                 textAlign: TextAlign.end,
                 style: const TextStyle(
-                  fontSize: 20,
+                  color: Colors.white,
+                  fontSize: 14,
                   fontFamily: 'NotoNastaliqUrdu',
                 ),
               ),

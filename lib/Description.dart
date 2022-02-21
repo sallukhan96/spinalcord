@@ -43,8 +43,10 @@ class _DescriptionState extends State<Description> {
                   widget.Stockfield ?? ' ',
                   textAlign: TextAlign.justify,
                   textDirection: TextDirection.rtl,
-                  style: TextStyle(
-                    fontSize: 25,
+                  style: const TextStyle(
+                    color: Color(0xff2D2D2D),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28,
                     fontFamily: 'NotoNastaliqUrdu',
                   ),
                 ),
@@ -82,14 +84,18 @@ class _DescriptionState extends State<Description> {
           heading ?? ' ',
           textAlign: TextAlign.justify,
           textDirection: TextDirection.rtl,
-          style: const TextStyle(fontSize: 22, fontFamily: 'NotoNastaliqUrdu'),
+          style: const TextStyle(
+              color: Color(0xff2D2D2D),
+              fontSize: 22,
+              fontFamily: 'NotoNastaliqUrdu'),
         ),
         Text(
           paragraph ?? ' ',
           textAlign: TextAlign.justify,
           textDirection: TextDirection.rtl,
           style: const TextStyle(
-            fontSize: 16,
+            color: Color(0xff2D2D2D),
+            fontSize: 14,
             fontFamily: 'NotoNastaliqUrdu',
             wordSpacing: 2,
           ),

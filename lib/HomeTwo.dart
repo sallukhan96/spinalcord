@@ -52,7 +52,7 @@ class _HomeTwoState extends State<HomeTwo> {
                 data: TextData.Respiratory,
               ),
               GridItem(
-                label: 'مکمل زخ  ',
+                label: 'مکمل زخم',
                 imageUrl: 'assets/compelete-injury.png',
                 data: TextData.Complete_Injury,
               ),
@@ -121,13 +121,17 @@ class GridItem extends StatelessWidget {
             ImageIcon(
               AssetImage(imageUrl),
               size: 40,
+              color: Colors.white,
             ),
             const SizedBox(
               height: 10,
             ),
             Text(
               label,
-              style: const TextStyle(fontSize: 17),
+              style: const TextStyle(
+                fontSize: 17,
+                color: Color(0xffffffff),
+              ),
             ),
           ],
         ),
