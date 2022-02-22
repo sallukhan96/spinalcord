@@ -97,18 +97,26 @@ class LoginScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Align(
                           alignment: Alignment.center,
-                          child: InkWell(
-                            child: Text(
-                              "Dont Have Account?  SignUp",
-                              style: TextStyle(color: Colors.blue),
+                          child: Container(
+                            width: 270.0,
+                            height: 45.0,
+                            child: RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30)),
+                              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              color: Colors.blue,
+                              textColor: Colors.white,
+                              child: Text("Create Acoount"),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SignUp()),
+                                );
+
+                                return null;
+                              },
                             ),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SignUp()),
-                              );
-                            },
                           ),
                         ),
                       ),
