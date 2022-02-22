@@ -23,7 +23,7 @@ class SignUp extends StatelessWidget {
               color: Colors.black,
             )),
       ),
-      body:SingleChildScrollView(
+      body: SingleChildScrollView(
         // width: double.infinity,
         // height: double.infinity,
         child: Center(
@@ -39,7 +39,7 @@ class SignUp extends StatelessWidget {
                       if (value == null || value.isEmpty)
                         return "Please enter email";
                       if (!RegExp(
-                          r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$')
+                              r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$')
                           .hasMatch(value)) return 'INVALID EMAIL format';
                       return null;
                     },
@@ -93,8 +93,8 @@ class SignUp extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
-                  width: 140.0,
-                  height: 60.0,
+                  width: 270.0,
+                  height: 45.0,
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30)),

@@ -32,7 +32,6 @@ class LoginScreen extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 40),
                         child: TextFormField(
@@ -67,33 +66,10 @@ class LoginScreen extends StatelessWidget {
                               labelText: "password"),
                         ),
                       ),
-
-                      ///forgot password commented code
-
-                      // Padding(
-                      //   padding: const EdgeInsets.all(20),
-                      //   child: Align(
-                      //     alignment: Alignment.centerRight,
-                      //     child: InkWell(
-                      //       child: Text(
-                      //         "forget password",
-                      //         style: TextStyle(color: Colors.blue),
-                      //       ),
-                      //       onTap: () {
-                      //         Navigator.push(
-                      //           context,
-                      //           MaterialPageRoute(
-                      //               builder: (context) => ForgotPassword()),
-                      //         );
-                      //       },
-                      //     ),
-                      //   ),
-                      // ),
-                      //ignore: deprecated_member_use
                       SizedBox(height: 25),
                       Container(
-                        width: 140.0,
-                        height: 60.0,
+                        width: 270.0,
+                        height: 45.0,
                         // ignore: deprecated_member_use
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
@@ -116,9 +92,7 @@ class LoginScreen extends StatelessWidget {
                           },
                         ),
                       ),
-
-                      SizedBox(height: 10),
-
+                      SizedBox(height: 20),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Align(
@@ -139,13 +113,12 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 5),
-
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Align(
                           alignment: Alignment.center,
                           child: InkWell(
-                            child: Text(
+                            child: const Text(
                               "LogIn As A Guest!",
                               style: TextStyle(
                                   color: Colors.blue,

@@ -42,7 +42,7 @@ class _ReportState extends State<Report> {
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              "Report any bug",
+                              "Any Quesion or Suggession",
                               style: TextStyle(
                                 fontSize: 12,
                               ),
@@ -92,7 +92,8 @@ class _ReportState extends State<Report> {
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              'what\'s went wrong  *',
+                              "Ask your question here",
+                              // 'what\'s went wrong  *',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 12,
@@ -104,7 +105,7 @@ class _ReportState extends State<Report> {
                           height: MediaQuery.of(context).size.height * 0.01,
                         ),
                         TextFormField(
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: "Say Something......",
                             // labelText: "Email",
@@ -124,11 +125,20 @@ class _ReportState extends State<Report> {
                           width: double.infinity,
                           height: 45,
                           child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            color: Color(0xff00AFF0),
                             onPressed: () {
-                              if (formKey.currentState!.validate()) {
-                                print('valid');
-                              }
+                              if (formKey.currentState!.validate())
+                                //button function
+                                submitMessage(context);
                             },
+
+                            // onPressed: () {
+                            //   if (formKey.currentState!.validate()) {
+                            //     print('valid');
+                            //   }
+
                             child: const Text(
                               'submit',
                               style: TextStyle(
@@ -151,4 +161,19 @@ class _ReportState extends State<Report> {
       ),
     ])));
   }
+}
+
+void submitMessage(BuildContext context) {
+  var alert = const AlertDialog(
+    backgroundColor: Colors.white,
+    title: Text(
+      "Submitted Successfully",
+      style: TextStyle(color: Colors.black),
+    ),
+    content: Text(
+        "Your message has been send to our team, you will get reply with provided email."
+        "thanks"),
+  );
+
+  showDialog(context: context, builder: (BuildContext context) => alert);
 }
