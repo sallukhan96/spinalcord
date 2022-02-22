@@ -1,9 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinalcordinjury/HomeOne.dart';
-import 'package:flutter_spinalcordinjury/Homethree.dart';
-import 'package:flutter_spinalcordinjury/HomeTwo.dart';
+import 'package:flutter_spinalcordinjury/Report.dart';
+import 'package:flutter_spinalcordinjury/Profile.dart';
+import 'package:flutter_spinalcordinjury/Home.dart';
 import 'package:flutter_spinalcordinjury/LoginPage.dart';
 
 class Homepage extends StatefulWidget {
@@ -13,9 +13,9 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   List pages = [
-    HomeOne(),
-    HomeTwo(),
-    HomeThree(),
+    Report(),
+    Home(),
+    Profile(),
   ];
   var selectedIndex = 1;
 
@@ -89,7 +89,7 @@ class _HomepageState extends State<Homepage> {
           SizedBox(
             height: 50,
             child: Icon(
-              Icons.chat,
+              Icons.report,
               color: Colors.white,
             ),
           ),

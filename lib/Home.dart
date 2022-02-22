@@ -3,14 +3,14 @@ import 'package:flutter_spinalcordinjury/lists/list_data.dart';
 import 'package:flutter_spinalcordinjury/models/CustmoCardModel.dart';
 import 'data/text_data.dart';
 
-class HomeTwo extends StatefulWidget {
-  const HomeTwo({Key? key}) : super(key: key);
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
-  _HomeTwoState createState() => _HomeTwoState();
+  _HomeState createState() => _HomeState();
 }
 
-class _HomeTwoState extends State<HomeTwo> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,10 +20,10 @@ class _HomeTwoState extends State<HomeTwo> {
       primary: false,
       slivers: <Widget>[
         SliverPadding(
-          padding: const EdgeInsets.all(25),
+          padding: const EdgeInsets.all(15),
           sliver: SliverGrid.count(
-            crossAxisSpacing: 25,
-            mainAxisSpacing: 25,
+            crossAxisSpacing: 15,
+            mainAxisSpacing: 15,
             crossAxisCount: 2,
             children: <Widget>[
               GridItem(
@@ -130,7 +130,7 @@ class GridItem extends StatelessWidget {
               label,
               style: const TextStyle(
                 fontSize: 17,
-                color: Color(0xffffffff),
+                color: Colors.white,
               ),
             ),
           ],
@@ -140,9 +140,9 @@ class GridItem extends StatelessWidget {
             BoxShadow(
               color: Colors.black.withOpacity(0.4),
               //color of shadow
-              spreadRadius: 4,
-              blurRadius: 10,
-              offset: const Offset(4, 4),
+              spreadRadius: 1,
+              blurRadius: 0.3,
+              offset: const Offset(0, 0.5),
             ),
           ],
           borderRadius: BorderRadius.circular(30),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class HomeThree extends StatefulWidget {
+class Profile extends StatefulWidget {
   @override
   MapScreenState createState() => MapScreenState();
 }
 
-class MapScreenState extends State<HomeThree>
+class MapScreenState extends State<Profile>
     with SingleTickerProviderStateMixin {
   bool _status = true;
   final FocusNode myFocusNode = FocusNode();
