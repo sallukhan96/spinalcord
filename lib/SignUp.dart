@@ -96,24 +96,34 @@ class SignUp extends StatelessWidget {
                   width: 270.0,
                   height: 45.0,
                   child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)),
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                    child: Text("SignUp"),
                     onPressed: () {
                       if (formkey.currentState!.validate()) {
                         formkey.currentState!.save();
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LoginScreen()),
-                        );
-
                         return null;
                       }
                     },
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(80.0)),
+                    padding: EdgeInsets.all(0.0),
+                    child: Ink(
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                          ),
+                          borderRadius: BorderRadius.circular(30.0)),
+                      child: Container(
+                        constraints: const BoxConstraints(
+                            maxWidth: 300.0, minHeight: 50.0),
+                        alignment: Alignment.center,
+                        child: const Text(
+                          "SignUp",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(

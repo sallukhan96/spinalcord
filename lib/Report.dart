@@ -133,12 +133,6 @@ class _ReportState extends State<Report> {
                                 //button function
                                 submitMessage(context);
                             },
-
-                            // onPressed: () {
-                            //   if (formKey.currentState!.validate()) {
-                            //     print('valid');
-                            //   }
-
                             child: const Text(
                               'submit',
                               style: TextStyle(

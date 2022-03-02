@@ -71,14 +71,7 @@ class LoginScreen extends StatelessWidget {
                         Container(
                           width: 270.0,
                           height: 45.0,
-                          // ignore: deprecated_member_use
                           child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            color: Colors.blue,
-                            textColor: Colors.white,
-                            child: Text("Login"),
                             onPressed: () {
                               if (formkey.currentState!.validate()) {
                                 formkey.currentState!.save();
@@ -91,52 +84,109 @@ class LoginScreen extends StatelessWidget {
                                 return null;
                               }
                             },
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(80.0)),
+                            padding: EdgeInsets.all(0.0),
+                            child: Ink(
+                              decoration: BoxDecoration(
+                                  gradient: const LinearGradient(
+                                    colors: [
+                                      Color(0xff374ABE),
+                                      Color(0xff64B6FF)
+                                    ],
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              child: Container(
+                                constraints: const BoxConstraints(
+                                    maxWidth: 300.0, minHeight: 50.0),
+                                alignment: Alignment.center,
+                                child: const Text(
+                                  "Login",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                         SizedBox(height: 10),
                         Container(
                           width: 270.0,
                           height: 45.0,
-                          // ignore: deprecated_member_use
                           child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            color: Colors.blue,
-                            textColor: Colors.white,
-                            child: Text("Create Account"),
                             onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => SignUp()),
                               );
-
-                              return null;
                             },
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(80.0)),
+                            padding: EdgeInsets.all(0.0),
+                            child: Ink(
+                              decoration: BoxDecoration(
+                                  gradient: const LinearGradient(
+                                    colors: [
+                                      Color(0xff374ABE),
+                                      Color(0xff64B6FF)
+                                    ],
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              child: Container(
+                                constraints: const BoxConstraints(
+                                    maxWidth: 300.0, minHeight: 50.0),
+                                alignment: Alignment.center,
+                                child: const Text(
+                                  "Create Account",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                         SizedBox(height: 10),
                         Container(
                           width: 270.0,
                           height: 45.0,
-                          // ignore: deprecated_member_use
                           child: RaisedButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            color: Colors.blue,
-                            textColor: Colors.white,
-                            child: Text("Login As A Guest"),
                             onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => Homepage()),
                               );
-
-                              return null;
                             },
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(80.0)),
+                            padding: EdgeInsets.all(0.0),
+                            child: Ink(
+                              decoration: BoxDecoration(
+                                  gradient: const LinearGradient(
+                                    colors: [
+                                      Color(0xff374ABE),
+                                      Color(0xff64B6FF)
+                                    ],
+                                    begin: Alignment.centerLeft,
+                                    end: Alignment.centerRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              child: Container(
+                                constraints: const BoxConstraints(
+                                    maxWidth: 300.0, minHeight: 50.0),
+                                alignment: Alignment.center,
+                                child: const Text(
+                                  "Log In As A Guest",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ],
