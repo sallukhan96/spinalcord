@@ -103,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                                     maxWidth: 300.0, minHeight: 50.0),
                                 alignment: Alignment.center,
                                 child: const Text(
-                                  "Login",
+                                  "لاگ ان کریں",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(color: Colors.white),
                                 ),
@@ -142,7 +142,7 @@ class LoginScreen extends StatelessWidget {
                                     maxWidth: 300.0, minHeight: 50.0),
                                 alignment: Alignment.center,
                                 child: const Text(
-                                  "Create Account",
+                                  "اکاؤنٹ بنائیں",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(color: Colors.white),
                                 ),
@@ -181,7 +181,7 @@ class LoginScreen extends StatelessWidget {
                                     maxWidth: 300.0, minHeight: 50.0),
                                 alignment: Alignment.center,
                                 child: const Text(
-                                  "Log In As A Guest",
+                                  "بطور مہمان لاگ ان کریں",
                                   textAlign: TextAlign.center,
                                   style: TextStyle(color: Colors.white),
                                 ),

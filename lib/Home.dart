@@ -27,24 +27,14 @@ class _HomeState extends State<Home> {
             crossAxisCount: 2,
             children: <Widget>[
               GridItem(
-                label: 'حرکت کے افعال',
-                imageUrl: 'assets/mobility.png',
-                data: TextData.mobilities,
-              ),
-              GridItem(
-                label: 'مثانہ کا انتظام',
-                imageUrl: 'assets/bladder.png',
-                data: TextData.Blader,
-              ),
-              GridItem(
                 label: 'جلد کی حفاظت ',
                 imageUrl: 'assets/skin.png',
                 data: TextData.Skin,
               ),
               GridItem(
-                label: 'نظام انہضام',
-                imageUrl: 'assets/digestive.png',
-                data: TextData.Digestive,
+                label: 'حرام مغز کی چوٹ',
+                imageUrl: 'assets/compelete-injury.png',
+                data: TextData.Complete_Injury,
               ),
               GridItem(
                 label: 'نظام تنفس',
@@ -52,19 +42,19 @@ class _HomeState extends State<Home> {
                 data: TextData.Respiratory,
               ),
               GridItem(
-                label: 'مکمل زخم',
-                imageUrl: 'assets/compelete-injury.png',
-                data: TextData.Complete_Injury,
+                label: 'نظام انہضام',
+                imageUrl: 'assets/digestive.png',
+                data: TextData.Digestive,
               ),
               GridItem(
-                label: 'نامکمل زخم ',
-                imageUrl: 'assets/incomplete-injury.png',
-                data: TextData.Incomplete_Injury,
+                label: 'مثانہ کا انتظام',
+                imageUrl: 'assets/bladder.png',
+                data: TextData.Blader,
               ),
               GridItem(
-                label: 'نفسیاتی بحالی ',
-                imageUrl: 'assets/depression.png',
-                data: TextData.Depression,
+                label: 'حرکت کے افعال',
+                imageUrl: 'assets/mobility.png',
+                data: TextData.mobilities,
               ),
               GridItem(
                 label: 'جنسی بحالی ',
@@ -72,12 +62,25 @@ class _HomeState extends State<Home> {
                 data: TextData.Sexual_Rehibilitaion,
               ),
               GridItem(
-                label: 'معذوری',
-                imageUrl: 'assets/disability.png',
-                data: TextData.Disabilities,
+                label: 'نفسیاتی بحالی ',
+                imageUrl: 'assets/depression.png',
+                data: TextData.Depression,
               ),
-
-              ///old code for cards here
+              GridItem(
+                label: 'سپاسٹیسٹی',
+                imageUrl: 'assets/robotic-hand.png',
+                data: TextData.Spasticity,
+              ),
+              GridItem(
+                label: 'ویل چیئر',
+                imageUrl: 'assets/imagesDescription/disabled.png',
+                data: TextData.Wheelchair,
+              ),
+              GridItem(
+                label: 'چوٹ کا علاج اور مستقبل',
+                imageUrl: 'assets/disability.png',
+                data: TextData.Treatment,
+              ),
             ],
           ),
         ),
@@ -120,7 +123,7 @@ class GridItem extends StatelessWidget {
           children: [
             ImageIcon(
               AssetImage(imageUrl),
-              size: 40,
+              size: 65,
               color: Colors.white,
             ),
             const SizedBox(

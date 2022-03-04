@@ -118,7 +118,7 @@ class SignUp extends StatelessWidget {
                             maxWidth: 300.0, minHeight: 50.0),
                         alignment: Alignment.center,
                         child: const Text(
-                          "SignUp",
+                          "اکاؤنٹ بنائیں",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ),
