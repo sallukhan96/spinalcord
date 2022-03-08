@@ -27,9 +27,9 @@ class _HomeState extends State<Home> {
             crossAxisCount: 2,
             children: <Widget>[
               GridItem(
-                label: 'جلد کی حفاظت ',
-                imageUrl: 'assets/skin.png',
-                data: TextData.Skin,
+                label: 'نظام تنفس',
+                imageUrl: 'assets/respiratory.png',
+                data: TextData.Respiratory,
               ),
               GridItem(
                 label: 'حرام مغز کی چوٹ',
@@ -37,24 +37,14 @@ class _HomeState extends State<Home> {
                 data: TextData.Complete_Injury,
               ),
               GridItem(
-                label: 'نظام تنفس',
-                imageUrl: 'assets/respiratory.png',
-                data: TextData.Respiratory,
-              ),
-              GridItem(
-                label: 'نظام انہضام',
-                imageUrl: 'assets/digestive.png',
-                data: TextData.Digestive,
-              ),
-              GridItem(
                 label: 'مثانہ کا انتظام',
                 imageUrl: 'assets/bladder.png',
                 data: TextData.Blader,
               ),
               GridItem(
-                label: 'حرکت کے افعال',
-                imageUrl: 'assets/mobility.png',
-                data: TextData.mobilities,
+                label: 'جلد کی حفاظت ',
+                imageUrl: 'assets/skin.png',
+                data: TextData.Skin,
               ),
               GridItem(
                 label: 'جنسی بحالی ',
@@ -62,9 +52,19 @@ class _HomeState extends State<Home> {
                 data: TextData.Sexual_Rehibilitaion,
               ),
               GridItem(
-                label: 'نفسیاتی بحالی ',
-                imageUrl: 'assets/depression.png',
-                data: TextData.Depression,
+                label: 'نظام انہضام',
+                imageUrl: 'assets/digestive.png',
+                data: TextData.Digestive,
+              ),
+              GridItem(
+                label: 'ویل چیئر',
+                imageUrl: 'assets/imagesDescription/disabled.png',
+                data: TextData.Wheelchair,
+              ),
+              GridItem(
+                label: 'حرکت کے افعال',
+                imageUrl: 'assets/mobility.png',
+                data: TextData.mobilities,
               ),
               GridItem(
                 label: 'سپاسٹیسٹی',
@@ -72,9 +72,9 @@ class _HomeState extends State<Home> {
                 data: TextData.Spasticity,
               ),
               GridItem(
-                label: 'ویل چیئر',
-                imageUrl: 'assets/imagesDescription/disabled.png',
-                data: TextData.Wheelchair,
+                label: 'نفسیاتی بحالی ',
+                imageUrl: 'assets/depression.png',
+                data: TextData.Depression,
               ),
               GridItem(
                 label: 'چوٹ کا علاج اور مستقبل',
