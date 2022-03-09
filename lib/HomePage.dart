@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinalcordinjury/AboutUs.dart';
 import 'package:flutter_spinalcordinjury/Report.dart';
 import 'package:flutter_spinalcordinjury/Profile.dart';
 import 'package:flutter_spinalcordinjury/Home.dart';
@@ -54,10 +55,13 @@ class _HomepageState extends State<Homepage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.phone),
-              title: const Text("Contact us"),
+              leading: Icon(Icons.account_box_outlined),
+              title: const Text("About us"),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AboutUs()),
+                );
               },
             ),
             ListTile(
@@ -69,6 +73,19 @@ class _HomepageState extends State<Homepage> {
                   MaterialPageRoute(builder: (context) => LoginScreen()),
                 );
               },
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 365),
+              child: ListTile(
+                leading: Icon(
+                  Icons.copyright,
+                  size: 18,
+                ),
+                title: Text(
+                  "All Rights Reserved",
+                  style: TextStyle(fontSize: 12),
+                ),
+              ),
             ),
           ],
         ),
