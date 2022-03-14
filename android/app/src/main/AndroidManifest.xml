@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_spinalcordinjury">
    <application
-        android:label="SCIPAK"
+        android:label="Spinal Cord Injury Pak"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
