@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "559082778842",
+    "project_id": "spinal-cord-80059",
+    "storage_bucket": "spinal-cord-80059.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559082778842:android:8bcac6d605157bdb78b5e3",
+        "android_client_info": {
+          "package_name": "com.example.flutter_spinalcordinjury"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559082778842-eej12jsck591llkufh1jp12pktp81ldq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA31nVHVW-9SdklpLVSaiVwMzD-or_J2D8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559082778842-eej12jsck591llkufh1jp12pktp81ldq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
