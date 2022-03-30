@@ -25,7 +25,7 @@ class FireBase extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 final docData = snapshot.data?.docs[index].data();
                 final dateTime = (docData as Timestamp).toDate;
-                print('doocdata${docData}');
+                print('docdata${docData}');
                 return ListTile(
                   title: Text(dateTime.toString()),
                 );

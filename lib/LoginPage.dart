@@ -1,10 +1,34 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinalcordinjury/Firebase/auth_controller.dart';
 import 'package:flutter_spinalcordinjury/HomePage.dart';
 import 'package:flutter_spinalcordinjury/SignUp.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
+
+  TextEditingController _cEmail = TextEditingController();
+
+  TextEditingController _cPassword = TextEditingController();
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    ///this will assign local email, password to controllers
+    AuthController.getLocal().then((value){
+      _cEmail.text=value.email!;
+      _cPassword.text=value.password!;
+    });
+}
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +60,7 @@ class LoginScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 40),
                           child: TextFormField(
+                            controller: _cEmail,
                             validator: (value) {
                               if (value == null || value.isEmpty)
                                 return "required";
@@ -56,6 +81,7 @@ class LoginScreen extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 40),
                           child: TextFormField(
+                            controller: _cPassword,
                             validator: (value) {
                               if (value == null ||
                                   value.isEmpty && value.length <= 6)
@@ -75,11 +101,19 @@ class LoginScreen extends StatelessWidget {
                             onPressed: () {
                               if (formkey.currentState!.validate()) {
                                 formkey.currentState!.save();
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Homepage()),
-                                );
+                                AuthController.signIn(email: _cEmail.text,pass: _cPassword.text).then((value) {
+                                  if(value.length>0){
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Homepage()),
+                                    );
+                                  }else{
+                                    print('Email, Password Not Found');
+                                  }
+                                });
+
+
 
                                 return null;
                               }
@@ -117,7 +151,8 @@ class LoginScreen extends StatelessWidget {
                           height: 45.0,
                           child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+
+                              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => SignUp()),
@@ -194,4 +229,6 @@ class LoginScreen extends StatelessWidget {
           ),
         ));
   }
+
+
 }

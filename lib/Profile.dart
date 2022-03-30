@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_spinalcordinjury/Firebase/auth_controller.dart';
+import 'package:flutter_spinalcordinjury/models/userModel.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -10,11 +11,19 @@ class MapScreenState extends State<Profile>
     with SingleTickerProviderStateMixin {
   bool _status = true;
   final FocusNode myFocusNode = FocusNode();
+  TextEditingController _cEmail = TextEditingController();
 
+  TextEditingController _cPhone = TextEditingController();
+  TextEditingController _cName = TextEditingController();
+UserModel? user;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+ AuthController.getLocal().then((value) => user=value);
+ _cEmail.text=(user?.email??null)!;
+ _cPhone.text=(user?.phone??null)!;
+ _cName.text=(user?.name??null)!;
   }
 
   @override
@@ -95,7 +104,7 @@ class MapScreenState extends State<Profile>
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Text(
-                                    'Parsonal Information',
+                                    'Personal Information',
                                     style: const TextStyle(
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.bold),
@@ -139,6 +148,7 @@ class MapScreenState extends State<Profile>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  controller: _cName,
                                   decoration: const InputDecoration(
                                     hintText: "Enter Your Name",
                                   ),
@@ -176,6 +186,7 @@ class MapScreenState extends State<Profile>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  controller: _cEmail,
                                   decoration: const InputDecoration(
                                       hintText: "Enter Email ID"),
                                   enabled: !_status,
@@ -211,6 +222,7 @@ class MapScreenState extends State<Profile>
                             children: <Widget>[
                               Flexible(
                                 child: TextField(
+                                  controller: _cPhone,
                                   keyboardType: TextInputType.number,
                                   decoration: const InputDecoration(
                                       hintText: "Enter Mobile Number"),

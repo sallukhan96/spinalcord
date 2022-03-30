@@ -1,10 +1,17 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinalcordinjury/Firebase/auth_controller.dart';
 import 'package:flutter_spinalcordinjury/LoginPage.dart';
 import 'package:flutter_spinalcordinjury/LoginPage.dart';
+import 'package:flutter_spinalcordinjury/models/userModel.dart';
 
 class SignUp extends StatelessWidget {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
-
+  TextEditingController _cEmail = TextEditingController();
+  TextEditingController _cPassword = TextEditingController();
+  TextEditingController _cConfirmPassword = TextEditingController();
+  TextEditingController _cPhone = TextEditingController();
+  TextEditingController _cName = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +42,23 @@ class SignUp extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: TextFormField(
+                    controller: _cName,
+                    validator: (value) {
+                      if (value == null || value.isEmpty)
+                        return "Please enter Name";
+
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: "Name",
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: TextFormField(
+                    controller: _cEmail,
                     validator: (value) {
                       if (value == null || value.isEmpty)
                         return "Please enter email";
@@ -55,6 +79,7 @@ class SignUp extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   child: TextFormField(
+                    controller: _cPassword,
                     validator: (value) {
                       if (value == null || value.isEmpty && value.length <= 6)
                         return "password must not null";
@@ -70,6 +95,7 @@ class SignUp extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   child: TextFormField(
+                    controller: _cConfirmPassword,
                     validator: (value) {
                       if (value == null || value.isEmpty && value.length <= 6)
                         return "Please Confirm Your Password";
@@ -84,6 +110,7 @@ class SignUp extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   child: TextFormField(
+                    controller: _cPhone,
                     keyboardType: TextInputType.number,
                     obscureText: true,
                     decoration: const InputDecoration(
@@ -99,7 +126,14 @@ class SignUp extends StatelessWidget {
                     onPressed: () {
                       if (formkey.currentState!.validate()) {
                         formkey.currentState!.save();
-                        return null;
+                        AuthController.signUp(context,
+                            data: UserModel(
+                                    name: _cName.text,
+                                    email: _cEmail.text,
+                                    password: _cPassword.text,
+                                    phone: _cPhone.text)
+                                .toMap(),
+                            collection: Collections.registered_user);
                       }
                     },
                     shape: RoundedRectangleBorder(
@@ -131,7 +165,7 @@ class SignUp extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -152,4 +186,5 @@ class SignUp extends StatelessWidget {
       ),
     );
   }
+
 }

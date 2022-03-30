@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinalcordinjury/Firebase/firebase.dart';
 import 'package:flutter_spinalcordinjury/HomePage.dart';
+import 'SignUp.dart';
 import 'SplashScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         //fontFamily: 'NotoNastaliqUrdu',
       ),
-      home: FireBase(),
+      home: SignUp(),
     );
   }
 }
