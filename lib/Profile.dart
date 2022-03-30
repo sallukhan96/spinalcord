@@ -15,15 +15,15 @@ class MapScreenState extends State<Profile>
 
   TextEditingController _cPhone = TextEditingController();
   TextEditingController _cName = TextEditingController();
-UserModel? user;
+  UserModel? user;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
- AuthController.getLocal().then((value) => user=value);
- _cEmail.text=(user?.email??null)!;
- _cPhone.text=(user?.phone??null)!;
- _cName.text=(user?.name??null)!;
+    AuthController.getLocal().then((value) => user = value);
+    _cEmail.text = (user?.email ?? '');
+    _cPhone.text = (user?.phone ?? '');
+    _cName.text = (user?.name ?? '');
   }
 
   @override

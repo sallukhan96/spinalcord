@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart' ;
-import 'package:flutter_spinalcordinjury/lists/Complete_injury.dart';
-import 'package:flutter_spinalcordinjury/lists/Respiratory.dart';
-import 'package:flutter_spinalcordinjury/lists/Respiratory.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_spinalcordinjury/models/CustmoCardModel.dart';
 import 'data/text_data.dart';
-import 'lists/Complete_injury.dart';
 import 'lists/list_data.dart';
 
 class Home extends StatefulWidget {
@@ -30,61 +26,61 @@ class _HomeState extends State<Home> {
             mainAxisSpacing: 15,
             crossAxisCount: 2,
             children: <Widget>[
-              // GridItem(
-              //   label: 'نظام تنفس',
-              //   imageUrl: 'assets/respiratory.png',
-              //   data: TextData.Respiratory,
-              // ),
-              // GridItem(
-              //   label: 'حرام مغز کی چوٹ',
-              //   imageUrl: 'assets/compelete-injury.png',
-              //   data: TextData.Complete_Injury,
-              // ),
-              // GridItem(
-              //   label: 'مثانہ کا انتظام',
-              //   imageUrl: 'assets/bladder.png',
-              //   data: TextData.Blader,
-              // ),
-              // GridItem(
-              //   label: 'جلد کی حفاظت ',
-              //   imageUrl: 'assets/skin.png',
-              //   data: TextData.Skin,
-              // ),
-              // GridItem(
-              //   label: 'جنسی بحالی ',
-              //   imageUrl: 'assets/Sexual.png',
-              //   data: TextData.Sexual_Rehibilitaion,
-              // ),
-              // GridItem(
-              //   label: 'نظام انہضام',
-              //   imageUrl: 'assets/digestive.png',
-              //   data: TextData.Digestive,
-              // ),
-              // GridItem(
-              //   label: 'ویل چیئر',
-              //   imageUrl: 'assets/imagesDescription/disabled.png',
-              //   data: TextData.Wheelchair,
-              // ),
-              // GridItem(
-              //   label: 'حرکت کے افعال',
-              //   imageUrl: 'assets/mobility.png',
-              //   data: TextData.mobilities,
-              // ),
-              // GridItem(
-              //   label: 'سپاسٹیسٹی',
-              //   imageUrl: 'assets/robotic-hand.png',
-              //   data: TextData.Spasticity,
-              // ),
-              // GridItem(
-              //   label: 'نفسیاتی بحالی ',
-              //   imageUrl: 'assets/depression.png',
-              //   data: TextData.Depression,
-              // ),
-              // GridItem(
-              //   label: 'چوٹ کا علاج اور مستقبل',
-              //   imageUrl: 'assets/disability.png',
-              //   data: TextData.Treatment,
-              // ),
+              GridItem(
+                label: 'نظام تنفس',
+                imageUrl: 'assets/respiratory.png',
+                data: TextData.Respiratory,
+              ),
+              GridItem(
+                label: 'حرام مغز کی چوٹ',
+                imageUrl: 'assets/compelete-injury.png',
+                data: TextData.Complete_Injury,
+              ),
+              GridItem(
+                label: 'مثانہ کا انتظام',
+                imageUrl: 'assets/bladder.png',
+                data: TextData.Blader,
+              ),
+              GridItem(
+                label: 'جلد کی حفاظت ',
+                imageUrl: 'assets/skin.png',
+                data: TextData.Skin,
+              ),
+              GridItem(
+                label: 'جنسی بحالی ',
+                imageUrl: 'assets/Sexual.png',
+                data: TextData.Sexual_Rehibilitaion,
+              ),
+              GridItem(
+                label: 'نظام انہضام',
+                imageUrl: 'assets/digestive.png',
+                data: TextData.Digestive,
+              ),
+              GridItem(
+                label: 'ویل چیئر',
+                imageUrl: 'assets/imagesDescription/disabled.png',
+                data: TextData.Wheelchair,
+              ),
+              GridItem(
+                label: 'حرکت کے افعال',
+                imageUrl: 'assets/mobility.png',
+                data: TextData.mobilities,
+              ),
+              GridItem(
+                label: 'سپاسٹیسٹی',
+                imageUrl: 'assets/robotic-hand.png',
+                data: TextData.Spasticity,
+              ),
+              GridItem(
+                label: 'نفسیاتی بحالی ',
+                imageUrl: 'assets/depression.png',
+                data: TextData.Depression,
+              ),
+              GridItem(
+                label: 'چوٹ کا علاج اور مستقبل',
+                imageUrl: 'assets/disability.png',
+                data: TextData.Treatment,
+              ),
             ],
           ),
         ),
