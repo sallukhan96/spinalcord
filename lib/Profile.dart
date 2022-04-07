@@ -20,14 +20,11 @@ class MapScreenState extends State<Profile>
   void initState() {
     // TODO: implement initState
     super.initState();
- AuthController.getLocal().then((value) {
-   _cEmail?.text=value.email??' ';
-   _cPhone?.text=value.phone??' ';
-   _cName?.text=value.name??' ';
-
- }
- );
-
+    AuthController.getLocal().then((value) {
+      _cEmail?.text = value.email ?? ' ';
+      _cPhone?.text = value.phone ?? ' ';
+      _cName?.text = value.name ?? ' ';
+    });
   }
 
   @override
@@ -43,52 +40,6 @@ class MapScreenState extends State<Profile>
           Column(
             children: <Widget>[
               Container(
-                height: 250.0,
-                color: Colors.white,
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
-                      child: Stack(fit: StackFit.loose, children: <Widget>[
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Container(
-                                width: 140.0,
-                                height: 140.0,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                    image:
-                                        ExactAssetImage('assets/profile.jpg'),
-                                    fit: BoxFit.cover,
-                                  ),
-                                )),
-                          ],
-                        ),
-                        Padding(
-                            padding:
-                                const EdgeInsets.only(top: 90.0, right: 100.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                CircleAvatar(
-                                  backgroundColor: Colors.blue,
-                                  radius: 25.0,
-                                  child: Icon(
-                                    Icons.camera_alt,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              ],
-                            )),
-                      ]),
-                    )
-                  ],
-                ),
-              ),
-              Container(
                 color: Color(0xffFFFFFF),
                 child: Padding(
                   padding: EdgeInsets.only(bottom: 25.0),
@@ -100,13 +51,20 @@ class MapScreenState extends State<Profile>
                           padding: EdgeInsets.only(
                               left: 25.0, right: 25.0, top: 25.0),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.max,
                             children: <Widget>[
                               Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
+                                  Text(
+                                    'Profile',
+                                    style: const TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  SizedBox(height: 50),
                                   Text(
                                     'Personal Information',
                                     style: const TextStyle(
@@ -119,7 +77,7 @@ class MapScreenState extends State<Profile>
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
-                                  _status ? _getEditIcon() : Container(),
+                                  Container(),
                                 ],
                               )
                             ],
@@ -306,22 +264,22 @@ class MapScreenState extends State<Profile>
     );
   }
 
-  Widget _getEditIcon() {
-    return GestureDetector(
-      child: CircleAvatar(
-        backgroundColor: Colors.blue,
-        radius: 14.0,
-        child: Icon(
-          Icons.edit,
-          color: Colors.white,
-          size: 16.0,
-        ),
-      ),
-      onTap: () {
-        setState(() {
-          _status = false;
-        });
-      },
-    );
-  }
+  // Widget _getEditIcon() {
+  //   return GestureDetector(
+  //     child: CircleAvatar(
+  //       backgroundColor: Colors.blue,
+  //       radius: 14.0,
+  //       child: Icon(
+  //         Icons.edit,
+  //         color: Colors.white,
+  //         size: 16.0,
+  //       ),
+  //     ),
+  //     onTap: () {
+  //       setState(() {
+  //         _status = false;
+  //       });
+  //     },
+  //   );
+  // }
 }

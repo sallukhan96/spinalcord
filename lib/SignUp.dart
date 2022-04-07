@@ -22,7 +22,10 @@ class SignUp extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginScreen()),
+              );
             },
             icon: const Icon(
               Icons.arrow_back_ios,
@@ -55,6 +58,7 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: TextFormField(
@@ -124,7 +128,9 @@ class SignUp extends StatelessWidget {
                   height: 45.0,
                   child: RaisedButton(
                     onPressed: () {
-                      if (formkey.currentState!.validate()) {
+                      if (formkey.currentState!.validate())
+                        submitMessage(context);
+                      {
                         formkey.currentState!.save();
                         AuthController.signUp(context,
                             data: UserModel(
@@ -165,7 +171,8 @@ class SignUp extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -186,5 +193,17 @@ class SignUp extends StatelessWidget {
       ),
     );
   }
+}
 
+void submitMessage(BuildContext context) {
+  var alert = const AlertDialog(
+    backgroundColor: Colors.white,
+    title: Text(
+      "SignUp Successfull",
+      style: TextStyle(color: Colors.black),
+    ),
+    content: Text("Your account is now ready Go to log in page"),
+  );
+
+  showDialog(context: context, builder: (BuildContext context) => alert);
 }
