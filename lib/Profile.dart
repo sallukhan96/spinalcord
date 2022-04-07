@@ -11,19 +11,23 @@ class MapScreenState extends State<Profile>
     with SingleTickerProviderStateMixin {
   bool _status = true;
   final FocusNode myFocusNode = FocusNode();
-  TextEditingController _cEmail = TextEditingController();
+  TextEditingController? _cEmail = TextEditingController();
 
-  TextEditingController _cPhone = TextEditingController();
-  TextEditingController _cName = TextEditingController();
-  UserModel? user;
+  TextEditingController? _cPhone = TextEditingController();
+  TextEditingController? _cName = TextEditingController();
+// UserModel? user;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    AuthController.getLocal().then((value) => user = value);
-    _cEmail.text = (user?.email ?? '');
-    _cPhone.text = (user?.phone ?? '');
-    _cName.text = (user?.name ?? '');
+ AuthController.getLocal().then((value) {
+   _cEmail?.text=value.email??' ';
+   _cPhone?.text=value.phone??' ';
+   _cName?.text=value.name??' ';
+
+ }
+ );
+
   }
 
   @override
